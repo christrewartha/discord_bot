@@ -2,6 +2,7 @@ import discord
 import discord_responses
 import sys
 
+
 async def send_message(message, user_message, is_private):
     try:
         response = discord_responses.get_response(user_message)
@@ -9,7 +10,8 @@ async def send_message(message, user_message, is_private):
         
     except Exception as e:
         print(e)
-        
+
+
 def run_discord_bot():
     
     intents = discord.Intents.default()
@@ -40,6 +42,7 @@ def run_discord_bot():
     sys.path.insert(0, '../../secret_config')
     from discord_bot_secret import DISCORD_BOT_TOKEN
     client.run(DISCORD_BOT_TOKEN)
-    
+
+
 if __name__ == "__main__":
-    run_discord_bot()        
+    run_discord_bot()
